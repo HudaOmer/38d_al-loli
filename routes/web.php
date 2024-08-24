@@ -2,6 +2,20 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OrderItemController;
+use App\Http\Controllers\UserController;
+
+
+Route::resource('users', UserController::class);
+// Users API routes
+// Route::get('users', [UserController::class, 'index'])->name('users.index');
+// Route::get('users/create', [UserController::class, 'create'])->name('users.create');
+// Route::get('users/{id}', [UserController::class, 'show']);
+// Route::post('users', [UserController::class, 'store'])->name('users.store');
+// Route::put('users/{id}', [UserController::class, 'update']);
+// Route::delete('users/{id}', [UserController::class, 'destroy']);
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,11 +32,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard');
-})->middleware(['auth'])->name('admin.dashboard');
-
-Route::get('/admin/users', function () {
-    return view('admin.users');
-})->middleware(['auth'])->name('admin.users');

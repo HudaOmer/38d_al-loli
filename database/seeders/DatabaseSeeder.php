@@ -15,8 +15,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Call the AdminUserSeeder to insert an admin user
-        $this->call(AdminUserSeeder::class);
     }
 }
 

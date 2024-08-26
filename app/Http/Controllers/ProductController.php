@@ -7,50 +7,85 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    // Display a listing of the resource.
     public function index()
     {
         $products = Product::all();
-        return response()->json($products);
+        return view('products.index', compact('products'));
     }
 
+    // Show the form for creating a new resource.
+    public function create()
+    {
+        return view('products.create');
+    }
+
+    // Store a newly created resource in storage.
     public function store(Request $request)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'price' => 'required|numeric',
-            'category' => 'required|string|max:255',
-            'stock_quantity' => 'required|integer',
+            'price' => 'required|numeric|min:0',
+            'category' => 'required|in:ring,necklace,earring,bracelet,home-accessories,head-accessories',
+            'stock_quantity' => 'required|integer|min:0',
         ]);
 
-        $product = Product::create($validated);
-        return response()->json($product, 201);
+        Product::create($validated);
+
+        return redirect()->route('products.index')->with('success', 'Product created successfully.');
     }
 
-    public function show($id)
+    // Display the specified resource.
+    public function show(Product $product)
     {
-        $product = Product::findOrFail($id);
-        return response()->json($product);
+        return view('products.show', compact('product'));
     }
 
-    public function update(Request $request, $id)
+    // Show the form for editing the specified resource.
+    public function edit(Product $product)
     {
-        $product = Product::findOrFail($id);
+        return view('products.edit', compact('product'));
+    }
+
+    // Update the specified resource in storage.
+    public function update(Request $request, Product $product)
+    {
         $validated = $request->validate([
             'name' => 'sometimes|required|string|max:255',
             'description' => 'sometimes|required|string',
-            'price' => 'sometimes|required|numeric',
-            'category' => 'sometimes|required|string|max:255',
-            'stock_quantity' => 'sometimes|required|integer',
+            'price' => 'sometimes|required|numeric|min:0',
+            'category' => 'sometimes|required|in:ring,necklace,earring,bracelet,home-accessories,head-accessories',
+            'stock_quantity' => 'sometimes|required|integer|min:0',
         ]);
 
         $product->update($validated);
-        return response()->json($product);
+
+        return redirect()->route('products.index')->with('success', 'Product updated successfully.');
     }
 
-    public function destroy($id)
+    // Remove the specified resource from storage.
+    public function destroy(Product $product)
     {
-        Product::destroy($id);
-        return response()->json(null, 204);
+        $product->delete();
+
+        return redirect()->route('products.index')->with('success', 'Product deleted successfully.');
+    }
+
+    /**
+     * Display a listing of products by category.
+     *
+     * @param string $category
+     * @return \Illuminate\View\View
+     */
+    public function indexByCategory(string $category)
+    {
+        $categories = ['ring', 'necklace', 'earring', 'bracelet', 'home-accessories', 'head-accessories'];
+        if (!in_array($category, $categories)) {
+            abort(404, 'Category not found');
+        }
+        $products = Product::where('category', $category)->get();
+        return view('products.index-by-category', ['products' => $products]);
     }
 }
+

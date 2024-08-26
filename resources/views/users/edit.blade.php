@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Edit User</title>
-</head>
-<body>
+<x-admin-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('عقد اللولي') }}
+        </h2>
+    </x-slot>
+    
     <h1>Edit User</h1>
     <form action="{{ route('users.update', $user) }}" method="POST">
         @csrf
@@ -36,5 +37,7 @@
         <button type="submit">Update</button>
     </form>
     <a href="{{ route('users.index') }}">Back to Users List</a>
-</body>
-</html>
+
+</x-admin-layout>
+
+    

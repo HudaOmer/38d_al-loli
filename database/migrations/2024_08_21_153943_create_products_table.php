@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->decimal('price', 10, 2);
-            $table->string('category');
+            $table->enum('category', ['ring', 'necklace', 'earring', 'bracelet', 'home-accessories', 'head-accessories']);
             $table->integer('stock_quantity');
             $table->timestamps();
         });

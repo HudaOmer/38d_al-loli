@@ -12,29 +12,14 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('All Products') }}
+                    <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
+                        {{ __('Users') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('products.byCategory', ['category' => 'ring'])" :active="request()->routeIs('products.byCategory') && request()->route('category') === 'ring'">
-                        {{ __('Rings') }}
+                    <x-nav-link :href="route('products.index', ['category' => 'ring'])" :active="request()->routeIs('products.index')">
+                        {{ __('Products') }}
                     </x-nav-link>
                     <x-nav-link :href="route('products.byCategory', ['category' => 'bracelet'])" :active="request()->routeIs('products.byCategory') && request()->route('category') === 'bracelet'">
-                        {{ __('Bracelets') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('products.byCategory', ['category' => 'earring'])" :active="request()->routeIs('products.byCategory') && request()->route('category') === 'earring'">
-                        {{ __('Earrings') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('products.byCategory', ['category' => 'necklace'])" :active="request()->routeIs('products.byCategory') && request()->route('category') === 'necklace'">
-                        {{ __('Necklaces') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('products.byCategory', ['category' => 'head-accessories'])" :active="request()->routeIs('products.byCategory') && request()->route('category') === 'head-accessories'">
-                        {{ __('Head Accessories') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('products.byCategory', ['category' => 'home-accessories'])" :active="request()->routeIs('products.byCategory') && request()->route('category') === 'home-accessories'">
-                        {{ __('Home Accessories') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('About Us') }}
+                        {{ __('Orders') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -72,7 +57,6 @@
                         </form>
                     </x-slot>
                 </x-dropdown>
-                <x-cart-icon></x-cart-icon>
             </div>
 
 

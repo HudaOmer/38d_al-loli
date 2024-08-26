@@ -1,0 +1,70 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #ffebee; /* Light pink */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #f06292; /* Pink */
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #0288d1; /* Baby blue */
+    padding: 10px 15px;
+    background-color: #b2dfdb; /* Mint green */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #80cbc4; /* Darker mint green */
+    color: #ffffff; /* White */
+}
+
+/* Main Content Styling */
+main {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffebee; /* Light pink */
+    margin-top: 20px;
+}
+
+footer p {
+    color: #f06292; /* Pink */
+}

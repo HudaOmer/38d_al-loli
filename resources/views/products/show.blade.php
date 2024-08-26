@@ -1,12 +1,12 @@
 <x-admin-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('عقد اللولي') }}
+            {{ __('Product Details') }}
         </h2>
     </x-slot>
     
     <div class="container mx-auto px-4 py-6">
-        <!-- User Details Container -->
+        <!-- Product Details Container -->
         <div class="flex items-start bg-white p-6 rounded-lg shadow-lg">
             <!-- SVG Icon -->
             <div class="flex-shrink-0">
@@ -18,22 +18,23 @@
                 </svg>
             </div>
 
-            <!-- User Details -->
+            <!-- Product Details -->
             <div class="ml-6 flex-1">
-                <h1 class="text-2xl font-semibold text-gray-800">User Details</h1>
-                <p class="mt-4"><strong class="text-gray-700">Name:</strong> {{ $user->name }}</p>
-                <p class="mt-2"><strong class="text-gray-700">Email:</strong> {{ $user->email }}</p>
-                <p class="mt-2"><strong class="text-gray-700">Role:</strong> {{ $user->role }}</p>
-                <p class="mt-2"><strong class="text-gray-700">Status:</strong> {{ $user->status }}</p>
+                <h1 class="text-2xl font-semibold text-gray-800">Product Details</h1>
+                <p class="mt-4"><strong class="text-gray-700">Name:</strong> {{ $product->name }}</p>
+                <p class="mt-2"><strong class="text-gray-700">Description:</strong> {{ $product->description }}</p>
+                <p class="mt-2"><strong class="text-gray-700">Price:</strong> ${{ number_format($product->price, 2) }}</p>
+                <p class="mt-2"><strong class="text-gray-700">Category:</strong> {{ ucfirst($product->category) }}</p>
+                <p class="mt-2"><strong class="text-gray-700">Stock Quantity:</strong> {{ $product->stock_quantity }}</p>
             </div>
 
             <!-- Action Buttons (Right Aligned) -->
             <div class="ml-6 flex flex-col justify-center">
                 <!-- Edit Button -->
-                <a href="{{ route('users.edit', $user) }}" class="inline-block bg-white text-black px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 mb-2">Edit</a>
+                <a href="{{ route('products.edit', $product) }}" class="inline-block bg-white text-black px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 mb-2">Edit</a>
 
                 <!-- Delete Button -->
-                <form action="{{ route('users.destroy', $user) }}" method="POST" style="display:inline;">
+                <form action="{{ route('products.destroy', $product) }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="inline-block bg-white text-black px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Delete</button>
@@ -41,9 +42,9 @@
             </div>
         </div>
 
-        <!-- Back to Users List -->
+        <!-- Back to Products List -->
         <div class="mt-6">
-            <a href="{{ route('users.index') }}" class="inline-block bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-400">Back to Users List</a>
+            <a href="{{ route('products.index') }}" class="inline-block bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-400">Back to Products List</a>
         </div>
     </div>
 </x-admin-layout>

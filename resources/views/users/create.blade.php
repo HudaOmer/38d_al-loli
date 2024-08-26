@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Create User</title>
-</head>
-<body>
+<x-admin-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('عقد اللولي') }}
+        </h2>
+    </x-slot>
+    
     <h1>Create User</h1>
     
      <!-- Display Validation Errors -->
@@ -46,5 +47,7 @@
         <button type="submit">Create</button>
     </form>
     <a href="{{ route('users.index') }}">Back to Users List</a>
-</body>
-</html>
+    
+</x-admin-layout>
+
+    

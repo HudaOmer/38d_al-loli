@@ -9,6 +9,7 @@ use App\Http\Controllers\UserController;
 
 
 Route::resource('users', UserController::class);
+Route::resource('products', ProductController::class);
 // Users API routes
 // Route::get('users', [UserController::class, 'index'])->name('users.index');
 // Route::get('users/create', [UserController::class, 'create'])->name('users.create');
@@ -16,6 +17,9 @@ Route::resource('users', UserController::class);
 // Route::post('users', [UserController::class, 'store'])->name('users.store');
 // Route::put('users/{id}', [UserController::class, 'update']);
 // Route::delete('users/{id}', [UserController::class, 'destroy']);
+
+Route::get('/products/category/{category}', [ProductController::class, 'indexByCategory'])
+     ->name('products.byCategory');
 
 Route::get('/', function () {
     return view('welcome');

@@ -9,6 +9,10 @@ class OrderItem extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'order_item_id';
+    // public $incrementing = true;
+    protected $fillable = ['order_id', 'product_id', 'quantity', 'price'];
+
     /**
      * Many to One relationship
      * Many order items belong to One Order

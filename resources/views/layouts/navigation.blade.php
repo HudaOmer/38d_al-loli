@@ -33,7 +33,7 @@
                     <x-nav-link :href="route('products.byCategory', ['category' => 'home-accessories'])" :active="request()->routeIs('products.byCategory') && request()->route('category') === 'home-accessories'">
                         {{ __('Home Accessories') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
                         {{ __('About Us') }}
                     </x-nav-link>
                 </div>

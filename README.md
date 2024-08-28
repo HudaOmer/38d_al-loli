@@ -1,6 +1,8 @@
 # `39d Al-loli Website`
 - Alx portfolio project
 
+![](https://github.com/HudaOmer/38d_al-loli/blob/development/public/assets/images/main_logo.png)
+
 # Features developed:
 
 ## Authentecation:

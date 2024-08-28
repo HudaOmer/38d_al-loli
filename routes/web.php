@@ -6,10 +6,18 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderItemController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CartController;
 
 
 Route::resource('users', UserController::class);
 Route::resource('products', ProductController::class);
+Route::resource('orders', OrderController::class);
+
+
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::delete('/cart/remove/{product_id}', [CartController::class, 'remove'])->name('cart.remove');
+
 // Users API routes
 // Route::get('users', [UserController::class, 'index'])->name('users.index');
 // Route::get('users/create', [UserController::class, 'create'])->name('users.create');
@@ -23,7 +31,7 @@ Route::get('/products/category/{category}', [ProductController::class, 'indexByC
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

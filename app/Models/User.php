@@ -57,4 +57,12 @@ class User extends Authenticatable
         return $this->role === 'admin';
     }
 
+    /**
+     * Get the orders for the user.
+     */
+    public function orders()
+    {
+        return $this->hasMany(Order::class, 'user_id', 'id');
+    }
+
 }

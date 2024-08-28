@@ -18,7 +18,7 @@
                     <x-nav-link :href="route('products.index', ['category' => 'ring'])" :active="request()->routeIs('products.index')">
                         {{ __('Products') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('products.byCategory', ['category' => 'bracelet'])" :active="request()->routeIs('products.byCategory') && request()->route('category') === 'bracelet'">
+                    <x-nav-link :href="route('orders.index', ['category' => 'bracelet'])" :active="request()->routeIs('orders.index') && request()->route('category') === 'bracelet'">
                         {{ __('Orders') }}
                     </x-nav-link>
                 </div>

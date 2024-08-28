@@ -4,19 +4,19 @@
 # Features developed:
 
 ## Authentecation:
-Register
-Log in
-Forget password
+* Register
+* Log in
+* Forget password
 
 ## Admin Dashboard:
-Users Management
-Stock Management
-Orders Management
+* Users Management
+* Stock Management
+* Orders Management
 
 ## Customer Dashboard:
-View all Products and Order By "Something
-View Products by category
-Add items to cart
+* View all Products and Order By "Something
+* View Products by category
+* Add items to cart
 
 
 ## `Prerequisites:`

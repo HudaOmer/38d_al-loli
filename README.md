@@ -100,6 +100,6 @@ By following these steps, you should be able to clone and run a Laravel project 
 [Youtube](https://youtu.be/tuZNtj48PPw?si=6kdmfuqpopSrJrQt)
 
 # `Contact`:
-[LinkedIn]()
+[LinkedIn](https://www.linkedin.com/in/huda-omer-9a1609209?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 [X](https://x.com/HudaHuda175?t=sw6hJ9pXcvDSeU8ANLNp1g&s=09)
 [Email](hudaoe175@gmail.com)

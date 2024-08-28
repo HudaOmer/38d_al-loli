@@ -22,7 +22,7 @@
 
 
 ## `Prerequisites:`
-
+* To view this project in your local machine make sure you have the following done: 
 1. Install `PHP`:
 - Ensure `PHP` is installed on your machine. Laravel typically requires `PHP 7.x` or higher.
 

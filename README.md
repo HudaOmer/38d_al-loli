@@ -94,3 +94,7 @@ Open a web browser and go to http://localhost:8000 (or the URL shown in your ter
 - Clear Cache: If you face issues, run `php artisan cache:clear` and `php artisan config:clear`.
 - Install `Node.js` and `NPM`: For frontend assets (optional, if the project uses `Vue.js` or `React`).
 By following these steps, you should be able to clone and run a Laravel project locally on your machine. Adjust configurations as per your project's specific requirements (e.g., configuring `mail`, queue services in `.env`).
+
+
+# `Demo`:
+[Youtube](https://youtu.be/tuZNtj48PPw?si=6kdmfuqpopSrJrQt)

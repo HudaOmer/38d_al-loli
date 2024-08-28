@@ -98,3 +98,8 @@ By following these steps, you should be able to clone and run a Laravel project 
 
 # `Demo`:
 [Youtube](https://youtu.be/tuZNtj48PPw?si=6kdmfuqpopSrJrQt)
+
+# `Contact`:
+[LinkedIn]()
+[X]()
+[Email](hudaoe175@gmail.com)

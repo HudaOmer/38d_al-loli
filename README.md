@@ -21,6 +21,8 @@
 * Add items to cart
 
 
+
+
 ## `Prerequisites:`
 * To view this project in your local machine make sure you have the following done: 
 1. Install `PHP`:
@@ -35,6 +37,10 @@
 
 4. Install a Web Server:
 You can use `Apache` or `Nginx`. Alternatively, `PHP's` built-in server can be used for development purposes.
+
+
+## `Steps to Set Up the website locally`:
+
 
 ## Step one: `Clone the Repository`:
 ```go

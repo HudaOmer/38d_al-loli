@@ -1,3 +1,24 @@
+# '39d Al-loli' Website
+- Alx portfolio project
+
+# Features developed:
+
+## Authentecation:
+Register
+Log in
+Forget password
+
+## Admin Dashboard:
+Users Management
+Stock Management
+Orders Management
+
+## Customer Dashboard:
+View all Products and Order By "Something
+View Products by category
+Add items to cart
+
+
 ## `Prerequisites:`
 
 1. Install `PHP`:
